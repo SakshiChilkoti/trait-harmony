@@ -3,16 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
-import { Mic, MicOff, Play, Square, Type } from 'lucide-react';
+import { Mic, Square, Type } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-
-// Web Speech API types
-declare global {
-  interface Window {
-    SpeechRecognition: any;
-    webkitSpeechRecognition: any;
-  }
-}
 
 interface VoiceResponseQuestionProps {
   question: string;
@@ -25,12 +17,12 @@ export function VoiceResponseQuestion({ question, description, onAnswer }: Voice
   const [isListening, setIsListening] = useState(false);
   const [inputMode, setInputMode] = useState<'voice' | 'text'>('voice');
   const [isRecording, setIsRecording] = useState(false);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<any>(null);
   const { toast } = useToast();
 
   const startListening = () => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       const recognition = new SpeechRecognition();
       
       recognition.continuous = true;
@@ -42,7 +34,7 @@ export function VoiceResponseQuestion({ question, description, onAnswer }: Voice
         setIsRecording(true);
       };
       
-      recognition.onresult = (event) => {
+      recognition.onresult = (event: any) => {
         let finalTranscript = '';
         
         for (let i = event.resultIndex; i < event.results.length; i++) {
@@ -56,7 +48,7 @@ export function VoiceResponseQuestion({ question, description, onAnswer }: Voice
         }
       };
       
-      recognition.onerror = (event) => {
+      recognition.onerror = () => {
         toast({
           title: "Speech Recognition Error",
           description: "Please try again or use text input.",
