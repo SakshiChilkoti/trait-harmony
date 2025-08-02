@@ -6,67 +6,67 @@
 
 @layer base {
   :root {
-    /* Core brand colors */
-    --background: 210 25% 98%;
-    --foreground: 222 84% 4.9%;
+    /* Girlish pastel color palette */
+    --background: 330 100% 98%;
+    --foreground: 340 30% 25%;
 
-    /* Brand primary - vibrant purple-blue gradient */
-    --primary: 250 84% 60%;
-    --primary-glow: 280 100% 70%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - soft pink gradient */
+    --primary: 330 82% 75%;
+    --primary-glow: 330 90% 85%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - warm coral accent */
-    --secondary: 15 80% 65%;
-    --secondary-glow: 25 95% 75%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary - lavender accent */
+    --secondary: 280 50% 85%;
+    --secondary-glow: 280 60% 90%;
+    --secondary-foreground: 340 30% 25%;
 
-    /* Success - vibrant green */
-    --success: 142 76% 48%;
-    --success-glow: 142 76% 60%;
+    /* Success - mint green */
+    --success: 142 50% 70%;
+    --success-glow: 142 60% 80%;
     --success-foreground: 0 0% 100%;
 
     /* Card and surfaces */
-    --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
-    --card-glow: 250 50% 95%;
+    --card: 320 60% 96%;
+    --card-foreground: 340 30% 25%;
+    --card-glow: 330 70% 92%;
 
     /* Interactive states */
-    --accent: 250 100% 95%;
-    --accent-foreground: 250 84% 30%;
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 290 70% 80%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 320 30% 92%;
+    --muted-foreground: 340 20% 50%;
 
-    /* Personality trait colors */
-    --trait-early-bird: 45 93% 60%;
-    --trait-cleanliness: 200 98% 60%;
-    --trait-social: 320 65% 60%;
-    --trait-noise: 280 80% 60%;
-    --trait-fitness: 120 60% 50%;
-    --trait-routine: 15 80% 60%;
+    /* Emotional trait colors */
+    --trait-peaceful: 200 60% 80%;
+    --trait-energetic: 45 85% 75%;
+    --trait-social: 320 65% 75%;
+    --trait-introspective: 260 50% 80%;
+    --trait-creative: 290 70% 75%;
+    --trait-analytical: 180 50% 75%;
 
-    /* Gradients */
+    /* Dreamy gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(330, 82%, 75%) 0%, hsl(280, 70%, 80%) 50%, hsl(260, 60%, 85%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--card-glow)) 100%);
 
-    /* Shadows and effects */
-    --shadow-primary: 0 20px 40px -10px hsl(var(--primary) / 0.3);
+    /* Soft shadows and effects */
+    --shadow-primary: 0 20px 40px -10px hsl(var(--primary) / 0.25);
     --shadow-secondary: 0 20px 40px -10px hsl(var(--secondary) / 0.2);
-    --shadow-card: 0 10px 30px -5px hsl(220 30% 50% / 0.1);
-    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.4);
+    --shadow-card: 0 10px 30px -5px hsl(330 50% 80% / 0.15);
+    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.3);
 
     /* Animation easing */
     --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     /* Other semantic tokens */
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 250 84% 60%;
+    --border: 320 30% 88%;
+    --input: 320 30% 88%;
+    --ring: 330 82% 75%;
 
     --radius: 1rem;
     

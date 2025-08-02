@@ -1,7 +1,7 @@
-import { RoommateApp } from '@/components/RoommateApp';
+import { EmotionalApp } from '@/components/EmotionalApp';
 
 const Index = () => {
-  return <RoommateApp />;
+  return <EmotionalApp />;
 };
 
 export default Index;
